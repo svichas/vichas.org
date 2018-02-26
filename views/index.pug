@@ -10,62 +10,36 @@ html
 		meta(name='viewport',content='width=device-width, initial-scale=1')
 		
 		// Link stylesheets
-		link(href="https://fonts.googleapis.com/css?family=Lato:400,900",rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900",rel="stylesheet")
 		link(href="storage/cssbin/essentials.min.css",rel="stylesheet")
-		link(href="storage/cssbin/page.master.css",rel="stylesheet")
+		link(href="storage/cssbin/vichas_flavored.master.css",rel="stylesheet")
 
 	body
 
+		.container
+			.main-wrapper
+				.main-wrapper-inner
+				
+					.center
+						.text-holder
+							h2 Stefanos Vichas
 
-		div(class='container row horizontal-center')
+					.row.main-content
+						.col-md-6.col-sm-8.col-xs-12
+							.stat-row
+								p.label-text Born 
+									small (d-m-Y)
+								h1.caption 15.01.2018
+						.col-md-6.col-sm-4.col-xs-12
+							img(src="storage/image/12978171.jpg", alt="Stefanos image", class="fetuare-image")
+				
 
-
-			//-
-				About section
-
-			div(class='card col-8 row horizontal-center')
-				div(class='col-8')
-					h2(class='title') About stefanos
-					p Stefanos is a developer and student based in Greece, athens. He's undergraduate statistics student at Athens university of economics and business. He also works part-time for a tech company based in athens. He is running frequently and also watches movies.
-
-
-				div(class='col-4',style='min-width:150px;')
-					img(src="storage/image/12978171.jpg", alt="Stefanos vichas profile image", style="width:100%;")
-
-
-
-			//-
-				Hacking section
-
-			div(class='card col-8 row horizontal-center')
-
-				div(class='col-3',style='min-width:150px;')
-					img(src="storage/image/laptop.svg", alt="Laptop image", style="width:100%;")
-
-				div(class='col-9',style='text-align:right;')
-					h2(class='title') Stefanos is making things
-					p Stefanos started creating things related to the internet from a young age. He's one of the main maintainers for <a href='https://github.com/svichas/essentials.css' target="_blank">essentials.css</a> and many other open source project at github. Stefanos is interested with techologies related to the internet.
+					footer.copyright
+						p &copy; Stefanos Vichas 
+							a(href="") MIT LICENSE
 
 
-			//-
-				Find stefanos section
-
-
-			div(class='card col-8',style='text-align:center;')
-				h2(class='title') Find stefanos
-
-				div
-					
-					ul.socials
-						li
-							a(href="https://github.com/svichas", target="_blank",title="Github profile")
-								img(src="storage/image/github.svg", alt="Github svg icon")
-						li
-							a(href="https://www.instagram.com/stefanosvichas/", target="_blank",title="Instagram profile")
-								img(src="storage/image/instagram.svg", alt="Instagram svg icon")
-						li
-							a(href="mailto:stefanos@vichas.org", target="_blank",title="stefanos@vichas.org")
-								img(src="storage/image/envelope.svg", alt="Envelope svg icon")
+		
 
 
 	

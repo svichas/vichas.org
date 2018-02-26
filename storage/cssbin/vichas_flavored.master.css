@@ -1,0 +1,90 @@
+* {
+	font-family: 'Lato', sans-serif;
+}
+
+/** Typography */
+.center {
+	text-align: center;
+}
+.text-holder {
+	display: inline-block;
+}
+.text-holder h2 {
+	color: #111;
+	background: #fff;
+	display: inline-block;
+	margin: 0px;
+	padding:0px;
+	line-height: 42px;
+	font-size: 42px;
+	font-weight: 900;
+}
+.text-holder:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-bottom: -6px;
+    border-top: 43px solid #fff;
+    border-right: 20px solid transparent;
+}
+.text-holder:before {
+	content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-bottom: -6px;
+    border-top: 43px solid #fff;
+    border-left: 6px solid transparent;
+}
+
+/** Main table style **/
+.container {
+	display: flex;
+	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+.main-wrapper-inner {
+	width: 100%;
+	display: inline-block;
+}
+.main-wrapper {
+	box-shadow: inset 0px 0px 5px #444;
+	padding: 20px;
+	background-color: #f8a5c2;
+	background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+	width: 90vh;
+	max-width: 900px; 
+}
+.main-content {
+	padding-top: 50px;
+}
+.stat-row {
+	padding-top: 10px;
+}
+.stat-row .label-text {
+	margin:0px;
+	color:#222;
+}
+.stat-row .caption {
+	margin:0px;
+	color: #222;
+}
+.fetuare-image {
+	height: auto;
+	width: 100%;
+	max-width: 250px;
+	display: block;
+	margin: 0 auto;
+}
+
+/** Footer style **/
+.copyright p,
+.copyright a {
+	color: #fff;
+	font-size: 11px;
+}
+.copyright a {
+	font-weight: 600;
+}
