@@ -7,6 +7,7 @@
 	text-align: center;
 }
 .text-holder {
+	position: relative;
 	display: inline-block;
 }
 .text-holder h2 {
@@ -27,6 +28,8 @@
     margin-bottom: -6px;
     border-top: 43px solid #fff;
     border-right: 20px solid transparent;
+		position: absolute;
+		right: -20px;
 }
 .text-holder:before {
 	content: "";
@@ -36,6 +39,8 @@
     margin-bottom: -6px;
     border-top: 43px solid #fff;
     border-left: 6px solid transparent;
+		position: absolute;
+		left: -6px;
 }
 
 /** Main table style **/
@@ -55,7 +60,7 @@
 	background-color: #f8a5c2;
 	background-image: url("https://www.transparenttextures.com/patterns/arches.png");
 	width: 90vh;
-	max-width: 900px; 
+	max-width: 900px;
 }
 .main-content {
 	padding-top: 50px;
