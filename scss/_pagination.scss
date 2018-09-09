@@ -1,0 +1,31 @@
+
+.pagination {
+    right: 15%;
+    top: 20%;
+    position: absolute;
+    transform: rotate(-90deg);
+}
+.currentPage {
+    display: inline-block;
+    line-height: 1;
+    font-size: 1em;
+    &:after {
+        content: "";
+        display: inline-block;
+        width: 15px;
+        height: 1px;
+        vertical-align: middle;
+        margin: 0 5px;
+        background-color: #000;
+    }
+}
+.pageNumber {
+    font-size: 1em;
+    line-height: 1;
+    display: inline-block;
+}
+.pagePlaceholder {
+    display: block;
+    font-size: 1em;
+    letter-spacing: 0.12em;
+}
