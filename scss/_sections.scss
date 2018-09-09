@@ -11,6 +11,12 @@
     max-width: 400px;
     &.active {
         top: 50%;
+        .sectionQuote {
+            opacity: 1;
+            &:before {
+                width: 150%;
+            }
+        }
     }
 }
 
@@ -25,7 +31,7 @@
     .rightContent {
         margin-left: 50%;
         text-align: left;
-            width: 100%;
+        width: 100%;
     }
 }
 
@@ -38,8 +44,8 @@
     transform: rotate(-90deg) translate3d(0,-50%,0);
 }
 
-
 .sectionQuote {
+    will-change: opacity;
     position: absolute;
     bottom: 0px;
     right: -50%;
@@ -51,19 +57,21 @@
     text-align: right;
     color: #000;
     font-size: 1em;
-    margin: 0;
+    opacity: 0;
+    transition: opacity 2s ease;
     &:before {
         content: "";
         position: absolute;
         top: 10px;
         left: -50%;
-        width: 150%;
+        width: 0;
         height: 1px;
         background-color: #222;
+        will-change: width;
+        transition: width 2s linear;
     }
     .writer {
         line-height: 1;
-
         &:before {
             content: "";
             display: inline-block;

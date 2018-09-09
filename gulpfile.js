@@ -9,14 +9,12 @@ const autoprefixer = require('gulp-autoprefixer');
 const pug = require('gulp-pug');
 
 
-
 // creating compile task
 gulp.task("compile-sass", function() {
 
 	//compile sass compressed version
 	gulp.src("scss/*.scss")
 	.pipe(sass({outputStyle: "compressed"}).on("error", sass.logError))
-	.pipe(sass().on("error", sass.logError))
 	.pipe(rename("main.css"))
 	.pipe(autoprefixer({
         browsers: ['last 4 versions'],
