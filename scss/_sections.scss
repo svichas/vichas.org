@@ -1,24 +1,28 @@
-
-
 .section {
     position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
     height: 60vh;
     width: 80%;
     max-width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -200%, 0);
+    transition: transform 1000ms ease;
+    will-change: transform;
+    
     &.active {
-        top: 50%;
-        .sectionQuote {
-            opacity: 1;
-            &:before {
-                width: 150%;
-            }
-        }
-        + .section {
-            top: auto;
-            bottom: -100%;
+        transform: translate3d(-50%, -50%, 0);
+    }
+    &.nextFromActive {
+        transform: translate3d(-50%, 200%, 0);
+    }
+}
+
+// animate inner section
+.section.active {
+    .sectionQuote {
+        opacity: 1;
+        &:before {
+            width: 150%;
         }
     }
 }
@@ -70,7 +74,6 @@
         width: 0;
         height: 1px;
         background-color: #222;
-        will-change: width;
         transition: width 2s linear;
     }
     .writer {
