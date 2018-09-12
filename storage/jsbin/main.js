@@ -1,7 +1,10 @@
 
+$(function() {
+    
+    $(".section").eq(0).addClass("active");
 
-window.onload = function() {
+    $('.mainContainer').on('mousewheel', function(event) {
+        console.log(event.deltaX, event.deltaY, event.deltaFactor);
+    });
 
-    document.querySelectorAll(".section")[0].classList.add("active");
-
-}
+});

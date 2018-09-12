@@ -2,11 +2,10 @@
 
 .section {
     position: absolute;
-    top: -500px;
+    top: 100%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
-    height: 90vh;
-    max-height: 800px;
+    height: 60vh;
     width: 80%;
     max-width: 400px;
     &.active {
@@ -16,6 +15,10 @@
             &:before {
                 width: 150%;
             }
+        }
+        + .section {
+            top: auto;
+            bottom: -100%;
         }
     }
 }
