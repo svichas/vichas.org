@@ -1,8 +1,18 @@
 
 $(function() {
     $(".section").eq(0).addClass("active");
+    $("body").addClass("loaded");
+    $("body").keydown(function(e) {
+        if (e.key == "ArrowUp") {
+            prevpage();
+        } else if (e.key == "ArrowDown") {
+            nextpage();
+        }
+    });
     setpage();
 });
+
+
 
 window.addEventListener('wheel', function(e) {
   if (e.deltaY < 0) {

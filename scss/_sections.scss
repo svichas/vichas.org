@@ -8,7 +8,6 @@
     transform: translate3d(-50%, -200%, 0);
     transition: transform 1000ms ease;
     will-change: transform;
-    
     &.active {
         transform: translate3d(-50%, -50%, 0);
     }
@@ -25,6 +24,10 @@
             width: 150%;
         }
     }
+    .rightContent {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
 .sectionInner {
@@ -35,17 +38,38 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 50px;
+    header {
+        width: 100%;
+    }
+
+    h1 {
+        color: #fff;
+        text-shadow: 0px 0px 3px #353535;
+    }
+
+    p {
+        color: #fff;
+        font-weight: bold;
+        text-shadow: 0px 0px 3px #353535;
+    }
+
     .rightContent {
         margin-left: 50%;
         text-align: left;
         width: 100%;
+        opacity: 0;
+        transform: translateX(-200px);
+        will-change: transform;
+        transition: transform 1500ms ease, opacity 2500ms ease;
     }
 }
 
 .sectionPlaceholder {
     position: absolute;
-    top: 50%;
+    white-space: nowrap;
+    top: 60%;
     margin: 0;
+    font-size: 2em;
     left: -100px;
     width: 0px;
     transform: rotate(-90deg) translate3d(0,-50%,0);

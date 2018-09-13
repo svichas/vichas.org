@@ -3,8 +3,18 @@
     right: 15%;
     top: 20%;
     position: absolute;
-    transform: rotate(-90deg);
+    transition: transform 1000ms ease, opacity 1000ms ease;
+    opacity: 0;
+    transform: rotate(-90deg) translateY(100px);
 }
+
+.loaded {
+    .pagination {
+        opacity: 1;
+        transform: rotate(-90deg) translateX(0);
+    }
+}
+
 .currentPage {
     display: inline-block;
     line-height: 1;
@@ -19,11 +29,13 @@
         background-color: #000;
     }
 }
+
 .pageNumber {
     font-size: 1em;
     line-height: 1;
     display: inline-block;
 }
+
 .pagePlaceholder {
     display: block;
     font-size: 1em;
