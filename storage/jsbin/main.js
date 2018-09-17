@@ -34,6 +34,13 @@ function setpage() {
     });
     $(".currentPage").html($(".section.active").index()+1);
     $(".pageNumber").html($(".section").length);
+
+    if ($(".section.active").index()) {
+        $("body").addClass("scrolled");
+    } else {
+        $("body").removeClass("scrolled");
+    }
+
 }
 
 function nextpage() {
