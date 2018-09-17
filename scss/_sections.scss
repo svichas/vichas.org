@@ -41,14 +41,22 @@
     }
 
     h1 {
-        color: #fff;
-        text-shadow: 0px 0px 3px #353535;
+        color: #c0c0c0;
+        //text-shadow: 0px 0px 3px #353535;
     }
 
     p {
-        color: #fff;
-        font-weight: bold;
-        text-shadow: 0px 0px 3px #353535;
+        color: #ccc;
+        //font-weight: bold;
+        //text-shadow: 0px 0px 3px #353535;
+    }
+
+    a {
+        color: #0074D9;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     .rightContent {
@@ -71,6 +79,7 @@
     left: -100px;
     width: 0px;
     transform: rotate(-90deg) translate3d(0,-50%,0);
+    color: #ccc;
 }
 
 .sectionQuote {
