@@ -1,0 +1,15 @@
+
+.socials {
+    list-style: none;
+    padding: 20px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+        height: auto;
+        width: 64px;
+    }
+    li {
+        display: inline-block;
+    }
+}
