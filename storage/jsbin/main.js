@@ -3,7 +3,7 @@
 var allowPageChange = false;
 
 $(function() {
-    
+
     // set first section active
     $(".section").eq(0).addClass("active");
 
@@ -19,10 +19,26 @@ $(function() {
         }
     });
 
+    var elm = document.querySelector("body");
+    var mc = new Hammer(elm);
+    mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+    mc.on("panup pandown", function(ev) {
+      if (!allowPageChange) return;
+      switch (ev.type) {
+        case "panup":
+          nextpage();
+          break;
+        case "pandown":
+          prevpage();
+          break;
+      }
+    });
+
     // render pagination & other ...
-    setpage();
+    setPage();
 
 });
+
 
 
 
@@ -44,7 +60,7 @@ window.addEventListener('wheel', function(e) {
 
 });
 
-function setpage() {
+function setPage() {
 
     // setting a class to all next sections from active section.
     var foundActive = false;
@@ -57,7 +73,7 @@ function setpage() {
     });
 
 
-    // rendering page 
+    // rendering page
     $(".currentPage").html($(".section.active").index()+1);
     $(".pageNumber").html($(".section").length);
 
@@ -67,6 +83,7 @@ function setpage() {
     } else {
         $("body").removeClass("scrolled");
     }
+
 
     // allow user to scroll page after 1second
     setInterval(function() {
@@ -88,7 +105,7 @@ function nextpage() {
 
         // deactivate scrolling
         allowPageChange = false;
-        setpage();
+        setPage();
     }
 }
 
@@ -105,7 +122,7 @@ function prevpage() {
 
         // deactivate scrolling
         allowPageChange = false;
-        setpage();
-        
+        setPage();
+
     }
 }

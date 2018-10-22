@@ -1,15 +1,30 @@
 
 .socials {
     list-style: none;
+    margin: 0;
     padding: 20px 0 0 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     img {
         height: auto;
-        width: 64px;
+        width: 40px;
     }
+    .section.active & li {
+      animation-name: bounceAnimation;
+      animation-duration: 1s;
+      animation-timing-function: ease;
+    }
+
     li {
-        display: inline-block;
+      @for $i from 0 through 4 {
+        &:nth-child(#{$i}) {
+          animation-delay: #{(.2 * $i) + .3}s;
+        }
+      }
+    }
+
+    @media (max-width: 640px) {
+      padding-top: 0;
     }
 }

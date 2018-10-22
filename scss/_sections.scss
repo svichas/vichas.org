@@ -5,6 +5,8 @@
     max-width: 400px;
     top: 50%;
     left: 50%;
+    min-height: 350px;
+    max-height: 90%;
     transform: translate3d(-50%, -200%, 0);
     transition: transform 1000ms ease;
     will-change: transform;
@@ -42,6 +44,7 @@
 
     h1 {
         color: #333;
+        font-size: 2em;
     }
 
     p {
@@ -64,6 +67,9 @@
         transform: translateX(-200px);
         will-change: transform;
         transition: transform 1500ms ease, opacity 2500ms ease;
+        @media (max-width: 640px) {
+          margin-left: 0;
+        }
     }
 }
 
@@ -84,10 +90,10 @@
     position: absolute;
     bottom: 0px;
     right: -50%;
-    width: 100%;
+    width: 90%;
     padding-top: 21px;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     padding-bottom: 20px;
     text-align: right;
     color: #333;
@@ -118,5 +124,11 @@
             margin: 0 5px;
             background-color: #333;
         }
+    }
+    @media (max-width: 1024px) {
+      right: -25%;
+    }
+    @media (max-width: 640px) {
+      right: 5%;
     }
 }
