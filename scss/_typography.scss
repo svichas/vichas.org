@@ -26,3 +26,13 @@ p {
     margin-bottom: 1em;
     font-size: 1em;
 }
+
+
+
+a {
+    color: #0074D9;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}

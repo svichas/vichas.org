@@ -6,6 +6,11 @@
     transition: transform 1000ms ease, opacity 1000ms ease;
     opacity: 0;
     transform: rotate(-90deg) translateY(100px);
+
+    @media (max-width: 1024px) {
+      top: 25px;
+      right: 25px;
+    }
 }
 
 .loaded {
