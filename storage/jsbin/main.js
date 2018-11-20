@@ -45,18 +45,18 @@ $(function() {
 
 window.addEventListener('wheel', function(e) {
 
-    // prevent user from change pages too fast
-    if (!allowPageChange) return;
+  // prevent user from change pages too fast
+  if (!allowPageChange) return;
 
-    // check scroll direction
-	if (e.deltaY < 0) {
-        // case scroll up
-		prevpage();
-	}
-	if (e.deltaY > 0) {
-        // case scroll down
-		nextpage();
-	}
+  // check scroll direction
+  if (e.deltaY < 0) {
+      // case scroll up
+  prevpage();
+  }
+  if (e.deltaY > 0) {
+      // case scroll down
+  nextpage();
+  }
 
 });
 
@@ -86,7 +86,7 @@ function setPage() {
 
 
     // allow user to scroll page after 1second
-    setInterval(function() {
+    setTimeout(function() {
         allowPageChange = true;
     }, 1000);
 
