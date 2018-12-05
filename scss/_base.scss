@@ -1,11 +1,12 @@
-
-*,
-*:after,
-*:before {
-    box-sizing: border-box;
+html {
+  box-sizing: border-box;
 }
 
-html, body {
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
     margin: 0;
     font-family: 'Cabin Condensed', sans-serif;
 }
@@ -20,10 +21,10 @@ html, body {
     background-size: cover;
 }
 
+// Reset IE main tag
 main {
     display: block;
 }
-
 
 .blackandwhiteGradient {
     background: -webkit-linear-gradient(#eee, #333);
