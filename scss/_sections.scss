@@ -81,6 +81,12 @@
     width: 0px;
     transform: rotate(-90deg) translate3d(0,-50%,0);
     color: #333;
+    @media (max-width: 840px) {
+      top: -70px;
+      width: auto;
+      left: 50%;
+      transform: rotate(0) translate3d(-50%,0,0);
+    }
 }
 
 .sectionQuote {
