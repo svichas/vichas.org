@@ -94,12 +94,15 @@
     margin-right: 10px;
     padding-bottom: 20px;
     text-align: right;
-    color: #333;
+    color: #555;
     font-size: 1em;
     opacity: 0;
     margin: 0;
     transform: scaleX(.8);
     transition: opacity 2s ease, transform 1s linear;
+    p {
+      font-weight: bold;
+    }
     &:before {
         content: "";
         position: absolute;
@@ -111,8 +114,8 @@
     }
     .writer {
         line-height: 1;
-        color: #333;
-        font-weight: bold;
+        color: #000;
+        font-weight: 800;
         &:before {
             content: "";
             display: inline-block;
