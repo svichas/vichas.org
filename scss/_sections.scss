@@ -13,10 +13,11 @@
     will-change: transform;
     &.active {
         transform: translate3d(-50%, -50%, 0);
+        ~ .section {
+            transform: translate3d(-50%, 200%, 0);
+        }
     }
-    &.nextFromActive {
-        transform: translate3d(-50%, 200%, 0);
-    }
+
 }
 
 // animate inner section

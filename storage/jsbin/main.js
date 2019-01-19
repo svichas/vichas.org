@@ -61,18 +61,6 @@ window.addEventListener('wheel', function(e) {
 });
 
 function setPage() {
-
-    // setting a class to all next sections from active section.
-    var foundActive = false;
-    $(".section").removeClass("nextFromActive");
-    $(".section").each(function(e) {
-        if (foundActive) {
-            return $(this).addClass("nextFromActive");
-        }
-        if ($(this).hasClass("active")) foundActive = true;
-    });
-
-
     // rendering page
     $(".currentPage").html($(".section.active").index()+1);
     $(".pageNumber").html($(".section").length);
