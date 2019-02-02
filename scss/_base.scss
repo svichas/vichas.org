@@ -35,8 +35,13 @@ main {
 
 .scrollIndicator {
     position: absolute;
+    border: 0;
+    background-color: transparent;
     left: 50%;
     transform: translateX(-50%);
+    outline: 0;
+    appearance: 0;
+    cursor: pointer;
     width: 32px;
     height: 55px;
     bottom: 10%;
@@ -45,9 +50,12 @@ main {
     z-index: 15;
     opacity: 1;
     transition: opacity 500ms ease;
+
     .scrolled & {
         opacity: 0;
+        cursor: default;
     }
+
     &:after {
         content: "";
         position: absolute;

@@ -10,6 +10,11 @@ $(function() {
     // add loaded class when dom is loaded for animations
     $("body").addClass("loaded");
 
+    $("body").on("click", ".scrollIndicator", function(e) {
+         e.preventDefault();
+         if ($(".section").eq(0).hasClass("active")) nextpage();
+    });
+
     // change pages with keys function
     $("body").keydown(function(e) {
         if (e.key == "ArrowUp") {
