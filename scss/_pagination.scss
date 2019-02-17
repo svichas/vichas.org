@@ -19,14 +19,14 @@
     }
 }
 
-.currentPage {
+.page_current {
      display: inline-block;
      line-height: 1;
      font-size: 1em;
      width: .68em;
 }
 
-.pageNumber {
+.page_number {
     font-size: 1em;
     line-height: 1;
     display: inline-block;
@@ -41,7 +41,7 @@
     }
 }
 
-.pagePlaceholder {
+.page_placeholder {
      width: 100%;
      display: block;
      font-size: 1em;

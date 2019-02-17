@@ -10,7 +10,7 @@ $(function() {
     // add loaded class when dom is loaded for animations
     $("body").addClass("loaded");
 
-    $("body").on("click", ".scrollIndicator", function(e) {
+    $("body").on("click", ".scroll_indicator", function(e) {
          e.preventDefault();
          if ($(".section").eq(0).hasClass("active")) nextpage();
     });
@@ -56,19 +56,19 @@ window.addEventListener('wheel', function(e) {
   // check scroll direction
   if (e.deltaY < 0) {
       // case scroll up
-  prevpage();
+     prevpage();
   }
   if (e.deltaY > 0) {
       // case scroll down
-  nextpage();
+     nextpage();
   }
 
 });
 
 function setPage() {
     // rendering page
-    $(".currentPage").html($(".section.active").index()+1);
-    $(".pageNumber").html($(".section").length);
+    $(".page_current").html($(".section.active").index()+1);
+    $(".page_number").html($(".section").length);
 
     // add & remove class scrolled to body for animations
     if ($(".section.active").index()) {
