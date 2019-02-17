@@ -5,7 +5,7 @@
     position: absolute;
     transition: transform 1000ms ease, opacity 1000ms ease;
     opacity: 0;
-    transform: rotate(-90deg) translateY(100px);
+    transform: rotate(-90deg);
 
     @media (max-width: 1024px) {
       top: 25px;
@@ -16,33 +16,34 @@
 .loaded {
     .pagination {
         opacity: 1;
-        transform: rotate(-90deg) translateX(0);
     }
 }
 
 .currentPage {
-    display: inline-block;
-    line-height: 1;
-    font-size: 1em;
-    &:after {
-        content: "";
-        display: inline-block;
-        width: 15px;
-        height: 1px;
-        vertical-align: middle;
-        margin: 0 5px;
-        background-color: #000;
-    }
+     display: inline-block;
+     line-height: 1;
+     font-size: 1em;
+     width: .68em;
 }
 
 .pageNumber {
     font-size: 1em;
     line-height: 1;
     display: inline-block;
+    &:before {
+       content: "";
+       display: inline-block;
+       width: 15px;
+       height: 1px;
+       vertical-align: middle;
+       margin: 0 5px 0 0;
+       background-color: #000;
+    }
 }
 
 .pagePlaceholder {
-    display: block;
-    font-size: 1em;
-    letter-spacing: 0.12em;
+     width: 100%;
+     display: block;
+     font-size: 1em;
+     letter-spacing: 0.15em;
 }

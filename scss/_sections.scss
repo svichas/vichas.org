@@ -22,17 +22,17 @@
 
 // animate inner section
 .section.active {
-    .sectionQuote {
+    blockquote {
         opacity: 1;
         transform: scaleX(1);
     }
-    .rightContent {
+    .content_right {
         opacity: 1;
         transform: translateX(0px);
     }
 }
 
-.sectionInner {
+.section_inner {
     height: 100%;
     width: 100%;
     background-color: #fff;
@@ -54,7 +54,7 @@
     }
 
 
-    .rightContent {
+    .content_right {
         margin-left: 50%;
         text-align: left;
         width: 100%;
@@ -72,7 +72,7 @@
     }
 }
 
-.sectionPlaceholder {
+.section_placeholder {
     position: absolute;
     white-space: nowrap;
     top: 60%;
@@ -90,7 +90,7 @@
     }
 }
 
-.sectionQuote {
+blockquote {
     will-change: opacity;
     position: absolute;
     bottom: 0px;
